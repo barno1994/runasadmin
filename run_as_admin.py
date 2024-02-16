@@ -5,7 +5,7 @@ class RunAsAdmin:
     _is_log = True
     _log_file = None
 
-    def __init__(self, FilePath, logging=True,log_file_path = os.path.join(os.getcwd(), "execution_log.log")):
+    def __init__(self, FilePath, logging=False,log_file_path = os.path.join(os.getcwd(), "execution_log.log")):
         self._run_file_path = os.path.abspath(FilePath)
         self._is_log = logging
         self._log_file = os.path.abspath(log_file_path)
