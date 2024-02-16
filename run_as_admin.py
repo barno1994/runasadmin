@@ -29,7 +29,4 @@ class RunAsAdmin:
 
 # Example usage
 if __name__ == "__main__":
-    file_path = "C:\Windows\System32\cmd.exe"  # Replace this with the actual file path
-    log_file_path = os.path.join(os.getcwd(), "execution_log.log")
-    runner = RunAsAdmin(file_path, True,log_file_path)
-    runner.execute()
+    pass
