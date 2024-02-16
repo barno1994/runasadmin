@@ -6,7 +6,7 @@ This script provides a simple way to execute a file as an administrator on Windo
 ## Reminder
 If you do not want the UAC prompt to appear when executing the file, you can adjust the User Account Control settings. However, it's important to note that disabling UAC entirely for administrators can pose security risks.
 
-## Local Security Policy
+### Local Security Policy
 In the Local Security Policy settings, navigate to:
 ```rust
 Security Settings -> Local Policies -> Security Options
