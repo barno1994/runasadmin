@@ -33,7 +33,7 @@ file_path = "C:\Windows\System32\cmd.exe"  # Replace this with the actual file p
 log_file_path = os.path.join(os.getcwd(), "execution_log.log")
 
 # Create a RunAsAdmin instance
-runner = RunAsAdmin(file_path, log_file_path)
+runner = RunAsAdmin(file_path, True,log_file_path)
 
 # Execute the file as administrator
 runner.execute()
