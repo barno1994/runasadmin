@@ -3,6 +3,39 @@
 ## Introduction
 This script provides a simple way to execute a file as an administrator on Windows systems. It utilizes the `RunAsAdmin` class to handle the execution and logging of commands. By running a file as an administrator, it bypasses the usual User Account Control (UAC) prompts.
 
+## Installation
+You can install run-as-admin via pip:
+```bash
+pip install run-as-admin
+```
+
+## Example Usage
+Install 
+
+
+```python
+import os
+from run_as_admin import RunAsAdmin
+
+# Define the file path of the executable
+file_path = "C:\Windows\System32\cmd.exe"  # Replace this with the actual file path
+
+# Define the path for the log file
+log_file_path = os.path.join(os.getcwd(), "execution_log.log")
+
+# Create a RunAsAdmin instance
+runner = RunAsAdmin(file_path, True,log_file_path)
+
+# Execute the file as administrator
+runner.execute()
+```
+
+
+## Parameters
+- `file_path` (str): The path to the executable file you want to run.
+- `as_admin` (bool): Set to `True` if you want to run the program with administrative privileges, `False` otherwise.
+- `log_file_path` (str, optional): The path to the log file where execution details will be saved. If not specified, no log file will be created.
+
 ## Reminder
 If you do not want the UAC prompt to appear when executing the file, you can adjust the User Account Control settings. However, it's important to note that disabling UAC entirely for administrators can pose security risks.
 
@@ -20,21 +53,3 @@ Adjust the behavior of the User Account Control: Run all administrators in Admin
 
 ## License
 This script is released under the MIT License. Feel free to modify and distribute it according to your needs.
-
-## Example Usage
-```python
-import os
-from run_as_admin import RunAsAdmin
-
-# Define the file path of the executable
-file_path = "C:\Windows\System32\cmd.exe"  # Replace this with the actual file path
-
-# Define the path for the log file
-log_file_path = os.path.join(os.getcwd(), "execution_log.log")
-
-# Create a RunAsAdmin instance
-runner = RunAsAdmin(file_path, True,log_file_path)
-
-# Execute the file as administrator
-runner.execute()
-```
