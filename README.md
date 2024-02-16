@@ -1,4 +1,4 @@
-# RunAsAdmin
+# run-as-admin
 
 ## Introduction
 This script provides a simple way to execute a file as an administrator on Windows systems. It utilizes the `RunAsAdmin` class to handle the execution and logging of commands. By running a file as an administrator, it bypasses the usual User Account Control (UAC) prompts.
@@ -33,8 +33,8 @@ runner.execute()
 
 ## Parameters
 - `file_path` (str): The path to the executable file you want to run.
-- `as_admin` (bool): Set to `True` if you want to run the program with administrative privileges, `False` otherwise.
-- `log_file_path` (str, optional): The path to the log file where execution details will be saved. If not specified, no log file will be created.
+- `logging` (bool): Set to `True` if you want to keep log, `False` otherwise.
+- `log_file_path` (str, optional): The path to the log file where execution details will be saved. If not specified, `execution_log.log` file will be created in current directory.
 
 ## Reminder
 If you do not want the UAC prompt to appear when executing the file, you can adjust the User Account Control settings. However, it's important to note that disabling UAC entirely for administrators can pose security risks.
