@@ -10,8 +10,6 @@ pip install run-as-admin
 ```
 
 ## Example Usage
-Install 
-
 
 ```python
 import os
